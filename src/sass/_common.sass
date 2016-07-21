@@ -1,0 +1,61 @@
+// common styles here
+
+.content
+	height: 100vh
+	//height: 150vh
+	background: #ccc
+.center
+	max-width: 1200px
+	margin: 0 auto
+.header
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	background: rgba(#3b3b3b, .9)
+	.header__in
+		max-width: 1200px
+		margin: 0 auto
+		+clr
+		height: 100px
+		background: #fff
+		color: #000
+	.header__tools
+		float: right
+		padding-top: 27px
+.navigation
+	padding-top: 27px
+	float: left
+.menu
+	font-size: 0
+	.menu__item
+		display: inline-block
+		vertical-align: middle
+		font-size: 20px
+		margin-left: 20px
+		&:first-child
+			margin-left: 0
+	.menu__link
+		color: #000
+		transition: color 200ms
+		&:hover
+			text-decoration: none
+			color: green
+.btn
+	outline: none
+	-webkit-appearance: none
+
+.footer
+	position: fixed
+	bottom: 0
+	left: 0
+	right: 0
+	background: rgba(#3b3b3b, .9)
+	.footer__in
+		max-width: 1200px
+		margin: 0 auto
+		+clr
+	.footer__block
+		height: 100px
+		background: #fff
+		color: #000

@@ -1,0 +1,27 @@
+{% import "./_mixins.html" as mixins %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% include "layouts/_head.html" %}
+</head>
+<body>
+
+<!-- BEGIN content -->
+<div class="out">
+    {% include "../blocks/_header.html" %}
+    <!-- page content -->
+    <div class="l-content">
+        {% block content %}{% endblock %}
+    </div>
+</div>
+<!-- END content -->
+{% include "../blocks/_footer.html" %}
+{% include "../blocks/_modal.html" %}
+
+<!-- BEGIN scripts -->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<!-- END scripts -->
+
+</body>
+</html>
