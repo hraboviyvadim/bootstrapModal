@@ -19,4 +19,12 @@ How to use
 2) **if you are not using ES6 modules:**
     a) export jQuery object to global context: `window.jQuery = jQuery;`
     
-    b) copy function bootstrapModal() to your project after(!) jQuery and Bootstrap Modal include and call it with jquery selector you need.
+  b) copy function bootstrapModal(element) to your project after(!) jQuery and Bootstrap Modal include 
+  Call this function with jquery selector you need.
+  
+**Example:**  
+==============
+You have fixed header with full width of the screen
+`<header class="header js-fixed"></header>`
+
+Call `bootstrapModal('.js-fixed');` and thats all you have to do :)
