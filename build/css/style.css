@@ -4566,8 +4566,12 @@ button.close {
   display: none !important; }
 
 /*# sourceMappingURL=bootstrap.min.css.map */
+body {
+  padding: 0 50px; }
+
 .content {
   height: 100vh;
+  height: 150vh;
   background: #ccc; }
 
 .center {
@@ -4579,6 +4583,7 @@ button.close {
   top: 0;
   left: 0;
   right: 0;
+  padding: 0 20px;
   background: rgba(59, 59, 59, 0.9); }
   .header .header__in {
     max-width: 1200px;

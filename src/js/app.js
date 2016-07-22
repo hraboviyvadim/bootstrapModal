@@ -5,6 +5,6 @@ import bootstrapModalFix from './helpers/bootstrapModalFix';
 
 $(document).ready(function () {
 
-    //bootstrapModalFix('.js-fixed');
+    bootstrapModalFix('.js-fixed');
 
 });

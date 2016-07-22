@@ -1,7 +1,7 @@
-Gulp Boilerplate for generic CSS/HTML/JS development
-=============
+My way for fixing bug with Bootstrap Modals and fullwidth fixed elements
+========================================================================
 
-Based on nunjucks, sass, webpack
+There is a bug with Bootstrap Modals and fullwidth fixed elements
 
 Structure
 =============

@@ -4,22 +4,56 @@ webpackJsonp([0,1],[
 
 	'use strict';
 	
-	var _bootstrapModalFix = __webpack_require__(3);
+	var _bootstrapModalFix = __webpack_require__(1);
 	
 	var _bootstrapModalFix2 = _interopRequireDefault(_bootstrapModalFix);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var $ = __webpack_require__(1);
+	var $ = __webpack_require__(2);
 	
 	$(document).ready(function () {
 	
-	    //bootstrapModalFix('.js-fixed');
-	
+	    (0, _bootstrapModalFix2.default)('.js-fixed');
 	});
 
 /***/ },
 /* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	global.jQuery = __webpack_require__(2);
+	var $ = __webpack_require__(2);
+	
+	var bootstrapModal = __webpack_require__(3);
+	
+	var bootstrapModalFix = function bootstrapModalFix(element) {
+	    var modal = $.fn.modal.Constructor;
+	
+	    modal.prototype.setScrollbar = function () {
+	        var bodyPad = parseInt(this.$body.css('padding-right') || 0, 10);
+	        var elementPad = parseInt($(element).css('padding-right') || 0, 10);
+	        this.originalBodyPad = document.body.style.paddingRight || '';
+	        if (this.bodyIsOverflowing) {
+	            this.$body.css('padding-right', bodyPad + this.scrollbarWidth);
+	            $(element).css('padding-right', elementPad + this.scrollbarWidth);
+	        }
+	    };
+	    modal.prototype.resetScrollbar = function () {
+	        this.$body.css('padding-right', this.originalBodyPad);
+	        $(element).css('padding-right', '');
+	    };
+	};
+	
+	exports.default = bootstrapModalFix;
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*eslint-disable no-unused-vars*/
@@ -10099,7 +10133,7 @@ webpackJsonp([0,1],[
 
 
 /***/ },
-/* 2 */
+/* 3 */
 /***/ function(module, exports) {
 
 	/* ========================================================================
@@ -10442,40 +10476,6 @@ webpackJsonp([0,1],[
 	
 	}(jQuery);
 
-
-/***/ },
-/* 3 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	global.jQuery = __webpack_require__(1);
-	var $ = __webpack_require__(1);
-	
-	var bootstrapModal = __webpack_require__(2);
-	
-	var bootstrapModalFix = function bootstrapModalFix(element) {
-	    var modal = $.fn.modal.Constructor;
-	
-	    modal.prototype.setScrollbar = function () {
-	        var bodyPad = parseInt(this.$body.css('padding-right') || 0, 10);
-	        this.originalBodyPad = document.body.style.paddingRight || '';
-	        if (this.bodyIsOverflowing) {
-	            this.$body.css('padding-right', bodyPad + this.scrollbarWidth);
-	            $(element).css('padding-right', bodyPad + this.scrollbarWidth);
-	        }
-	    };
-	    modal.prototype.resetScrollbar = function () {
-	        this.$body.css('padding-right', this.originalBodyPad);
-	        $(element).css('padding-right', this.originalBodyPad);
-	    };
-	};
-	
-	exports.default = bootstrapModalFix;
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ }
 ]);
